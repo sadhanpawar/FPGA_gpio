@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z007sclg400-1
 
@@ -95,11 +96,11 @@ set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_ila_0_0/system_ila_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/system_ooc.xdc]
 
 OPTRACE "Adding files" END { }

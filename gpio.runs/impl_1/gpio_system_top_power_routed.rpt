@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1.1 (lin64) Build 3900603 Fri Jun 16 19:30:25 MDT 2023
-| Date             : Sun Oct  8 19:32:19 2023
+| Date             : Tue Oct 10 15:27:39 2023
 | Host             : sadhanpawar-ThinkPad-E14-Gen-4 running 64-bit Ubuntu 20.04.6 LTS
 | Command          : report_power -file gpio_system_top_power_routed.rpt -pb gpio_system_top_power_summary_routed.pb -rpx gpio_system_top_power_routed.rpx
 | Design           : gpio_system_top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.324        |
+| Total On-Chip Power (W)  | 1.336        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.205        |
+| Dynamic (W)              | 1.217        |
 | Device Static (W)        | 0.119        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 69.7         |
-| Junction Temperature (C) | 40.3         |
+| Max Ambient (C)          | 69.6         |
+| Junction Temperature (C) | 40.4         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -61,12 +61,12 @@ Table of Contents
 |   F7/F8 Muxes            |    <0.001 |       36 |     17600 |            0.20 |
 |   LUT as Distributed RAM |    <0.001 |       24 |      6000 |            0.40 |
 |   Others                 |     0.000 |      592 |       --- |             --- |
-| Signals                  |     0.004 |     5485 |       --- |             --- |
+| Signals                  |     0.005 |     5477 |       --- |             --- |
 | Block RAM                |     0.002 |        3 |        50 |            6.00 |
-| I/O                      |     0.006 |       64 |       100 |           64.00 |
+| I/O                      |     0.018 |       71 |       100 |           71.00 |
 | PS7                      |     1.174 |        1 |       --- |             --- |
 | Static Power             |     0.119 |          |           |                 |
-| Total                    |     1.324 |          |           |                 |
+| Total                    |     1.336 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -77,8 +77,8 @@ Table of Contents
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Vccint    |       1.000 |     0.031 |       0.025 |      0.006 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.008 |       0.000 |      0.007 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.008 |       0.001 |      0.007 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.006 |       0.005 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -153,7 +153,7 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| gpio_system_top            |     1.205 |
+| gpio_system_top            |     1.217 |
 |   dbg_hub                  |     0.003 |
 |     inst                   |     0.003 |
 |       BSCANID.u_xsdbm_id   |     0.003 |

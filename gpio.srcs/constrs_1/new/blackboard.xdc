@@ -69,13 +69,24 @@ set_property PACKAGE_PIN M14 [get_ports PB[3]];
 set_property IOSTANDARD LVCMOS33 [get_ports PB[*]];
 
 # Pmod header A
-set_property PACKAGE_PIN F16 [get_ports GPIO[0]];
-set_property PACKAGE_PIN F17 [get_ports GPIO[1]];
-set_property PACKAGE_PIN G19 [get_ports GPIO[2]];
-set_property PACKAGE_PIN G20 [get_ports GPIO[3]];
-set_property PACKAGE_PIN E18 [get_ports GPIO[4]];
-set_property PACKAGE_PIN E19 [get_ports GPIO[5]];
-set_property PACKAGE_PIN E17 [get_ports GPIO[6]];
+#set_property PACKAGE_PIN F16 [get_ports GPIO[0]];
+#set_property PACKAGE_PIN F17 [get_ports GPIO[1]];
+#set_property PACKAGE_PIN G19 [get_ports GPIO[2]];
+#set_property PACKAGE_PIN G20 [get_ports GPIO[3]];
+#set_property PACKAGE_PIN E18 [get_ports GPIO[4]];
+
+set_property SEVERITY {Warning} [get_drc_checks UCIO-1];
+set_property PACKAGE_PIN F16 [get_ports awaddr[0]];
+set_property PACKAGE_PIN F17 [get_ports awaddr[1]];
+set_property PACKAGE_PIN G19 [get_ports awaddr[2]];
+set_property PACKAGE_PIN G20 [get_ports awaddr[3]];
+set_property PACKAGE_PIN E18 [get_ports awaddr[4]];
+set_property PACKAGE_PIN E19 [get_ports awvalid];
+set_property PACKAGE_PIN E17 [get_ports awready];
+set_property IOSTANDARD LVCMOS33 [get_ports awaddr[*]];
+set_property IOSTANDARD LVCMOS33 [get_ports awvalid];
+set_property IOSTANDARD LVCMOS33 [get_ports awready];
+
 set_property PACKAGE_PIN D18 [get_ports GPIO[7]];
 
 # Pmod header B

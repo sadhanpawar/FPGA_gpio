@@ -53,7 +53,10 @@ module gpio_system_top (
     inout [53:0]FIXED_IO_mio,
     inout FIXED_IO_ps_clk,
     inout FIXED_IO_ps_porb,
-    inout FIXED_IO_ps_srstb
+    inout FIXED_IO_ps_srstb,
+    inout [4:0]awaddr,
+    inout awvalid,
+    inout awready
     );
      
     // Terminate all of the unused outputs or i/o's
@@ -118,6 +121,10 @@ module gpio_system_top (
         .gpio_data_in(gpio_data_in),
         .gpio_data_out(gpio_data_out),
         .gpio_data_oe(gpio_data_oe),
-        .intr(intr));
+        .intr(intr),
+        .awaddr(awaddr),
+        .awvalid(awvalid),
+        .awready(awready)
+        );
 
 endmodule

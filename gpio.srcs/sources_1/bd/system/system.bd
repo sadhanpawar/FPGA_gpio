@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x306F13E3E728F4AE",
+      "boundary_crc": "0x6EF79014D579891C",
       "device": "xc7z007sclg400-1",
       "gen_directory": "../../../../gpio.gen/sources_1/bd/system",
       "name": "system",
@@ -221,6 +221,17 @@
             "value_src": "const_prop"
           }
         }
+      },
+      "awaddr": {
+        "direction": "O",
+        "left": "4",
+        "right": "0"
+      },
+      "awvalid": {
+        "direction": "O"
+      },
+      "awready": {
+        "direction": "O"
       }
     },
     "components": {
@@ -1458,6 +1469,13 @@
       }
     },
     "nets": {
+      "M00_AXI_awready_1": {
+        "ports": [
+          "gpio_0/axi_awready",
+          "ps7_0_axi_periph/M00_AXI_awready",
+          "awready"
+        ]
+      },
       "gpio_0_gpio_data_oe": {
         "ports": [
           "gpio_0/gpio_data_oe",
@@ -1508,6 +1526,20 @@
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
           "proc_sys_reset_0/ext_reset_in"
+        ]
+      },
+      "ps7_0_axi_periph_M00_AXI_awaddr": {
+        "ports": [
+          "ps7_0_axi_periph/M00_AXI_awaddr",
+          "gpio_0/axi_awaddr",
+          "awaddr"
+        ]
+      },
+      "ps7_0_axi_periph_M00_AXI_awvalid": {
+        "ports": [
+          "ps7_0_axi_periph/M00_AXI_awvalid",
+          "gpio_0/axi_awvalid",
+          "awvalid"
         ]
       },
       "xlconcat_0_dout": {

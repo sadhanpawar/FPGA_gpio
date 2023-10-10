@@ -82,6 +82,7 @@ vlog -work xlconcat_v2_1_4 -64 -incr -mfcu  "+incdir+../../../../gpio.gen/source
 
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../gpio.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio.gen/sources_1/bd/system/ipshared/aed8/hdl" "+incdir+../../../../gpio.gen/sources_1/bd/system/ipshared/1b7e/hdl/verilog" "+incdir+../../../../gpio.gen/sources_1/bd/system/ipshared/122e/hdl/verilog" "+incdir+../../../../gpio.gen/sources_1/bd/system/ipshared/affe/hdl/verilog" "+incdir+../../../../gpio.gen/sources_1/bd/system/ipshared/20d0/hdl/verilog" "+incdir+/home/sadhanpawar/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
 "../../../bd/system/ip/system_xlconcat_0_0/sim/system_xlconcat_0_0.v" \
+"../../../bd/system/ip/system_ila_0_0/sim/system_ila_0_0.v" \
 "../../../bd/system/sim/system.v" \
 
 vlog -work generic_baseblocks_v2_1_0 -64 -incr -mfcu  "+incdir+../../../../gpio.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio.gen/sources_1/bd/system/ipshared/aed8/hdl" "+incdir+../../../../gpio.gen/sources_1/bd/system/ipshared/1b7e/hdl/verilog" "+incdir+../../../../gpio.gen/sources_1/bd/system/ipshared/122e/hdl/verilog" "+incdir+../../../../gpio.gen/sources_1/bd/system/ipshared/affe/hdl/verilog" "+incdir+../../../../gpio.gen/sources_1/bd/system/ipshared/20d0/hdl/verilog" "+incdir+/home/sadhanpawar/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
@@ -107,7 +108,6 @@ vlog -work axi_protocol_converter_v2_1_28 -64 -incr -mfcu  "+incdir+../../../../
 
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../gpio.gen/sources_1/bd/system/ipshared/ec67/hdl" "+incdir+../../../../gpio.gen/sources_1/bd/system/ipshared/aed8/hdl" "+incdir+../../../../gpio.gen/sources_1/bd/system/ipshared/1b7e/hdl/verilog" "+incdir+../../../../gpio.gen/sources_1/bd/system/ipshared/122e/hdl/verilog" "+incdir+../../../../gpio.gen/sources_1/bd/system/ipshared/affe/hdl/verilog" "+incdir+../../../../gpio.gen/sources_1/bd/system/ipshared/20d0/hdl/verilog" "+incdir+/home/sadhanpawar/Xilinx/Vivado/2023.1/data/xilinx_vip/include" \
 "../../../bd/system/ip/system_auto_pc_0/sim/system_auto_pc_0.v" \
-"../../../bd/system/ip/system_ila_0_0/sim/system_ila_0_0.v" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

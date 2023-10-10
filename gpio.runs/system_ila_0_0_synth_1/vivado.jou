@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1.1 (64-bit)
+# SW Build 3900603 on Fri Jun 16 19:30:25 MDT 2023
+# IP Build 3900379 on Sat Jun 17 05:28:05 MDT 2023
+# SharedData Build 3899622 on Fri Jun 16 03:34:24 MDT 2023
+# Start of session at: Sun Oct  8 19:28:51 2023
+# Process ID: 15003
+# Current directory: /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/system_ila_0_0_synth_1
+# Command line: vivado -log system_ila_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_ila_0_0.tcl
+# Log file: /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/system_ila_0_0_synth_1/system_ila_0_0.vds
+# Journal file: /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/system_ila_0_0_synth_1/vivado.jou
+# Running On: sadhanpawar-ThinkPad-E14-Gen-4, OS: Linux, CPU Frequency: 1600.000 MHz, CPU Physical cores: 16, Host memory: 40911 MB
+#-----------------------------------------------------------
+source system_ila_0_0.tcl -notrace

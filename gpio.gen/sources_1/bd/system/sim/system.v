@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1.1 (lin64) Build 3900603 Fri Jun 16 19:30:25 MDT 2023
-//Date        : Sun Oct  8 19:28:46 2023
+//Date        : Tue Oct 10 14:57:25 2023
 //Host        : sadhanpawar-ThinkPad-E14-Gen-4 running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target system.bd
 //Design      : system
@@ -338,6 +338,9 @@ module system
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
+    awaddr,
+    awready,
+    awvalid,
     gpio_data_in,
     gpio_data_oe,
     gpio_data_out,
@@ -363,11 +366,15 @@ module system
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK" *) inout FIXED_IO_ps_clk;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB" *) inout FIXED_IO_ps_porb;
   (* X_INTERFACE_INFO = "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB" *) inout FIXED_IO_ps_srstb;
+  output [4:0]awaddr;
+  output awready;
+  output awvalid;
   input [31:0]gpio_data_in;
   output [31:0]gpio_data_oe;
   output [31:0]gpio_data_out;
   (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 INTR.INTR INTERRUPT" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME INTR.INTR, PortWidth 1, SENSITIVITY LEVEL_HIGH" *) output intr;
 
+  wire M00_AXI_awready_1;
   wire [31:0]gpio_0_gpio_data_oe;
   wire [31:0]gpio_0_gpio_data_out;
   wire gpio_0_intr;
@@ -438,10 +445,7 @@ module system
   wire [2:0]ps7_0_axi_periph_M00_AXI_ARPROT;
   wire ps7_0_axi_periph_M00_AXI_ARREADY;
   wire ps7_0_axi_periph_M00_AXI_ARVALID;
-  wire [31:0]ps7_0_axi_periph_M00_AXI_AWADDR;
   wire [2:0]ps7_0_axi_periph_M00_AXI_AWPROT;
-  wire ps7_0_axi_periph_M00_AXI_AWREADY;
-  wire ps7_0_axi_periph_M00_AXI_AWVALID;
   wire ps7_0_axi_periph_M00_AXI_BREADY;
   wire [1:0]ps7_0_axi_periph_M00_AXI_BRESP;
   wire ps7_0_axi_periph_M00_AXI_BVALID;
@@ -453,8 +457,13 @@ module system
   wire ps7_0_axi_periph_M00_AXI_WREADY;
   wire [3:0]ps7_0_axi_periph_M00_AXI_WSTRB;
   wire ps7_0_axi_periph_M00_AXI_WVALID;
+  wire [31:0]ps7_0_axi_periph_M00_AXI_awaddr;
+  wire ps7_0_axi_periph_M00_AXI_awvalid;
   wire [2:0]xlconcat_0_dout;
 
+  assign awaddr[4:0] = ps7_0_axi_periph_M00_AXI_awaddr[4:0];
+  assign awready = M00_AXI_awready_1;
+  assign awvalid = ps7_0_axi_periph_M00_AXI_awvalid;
   assign gpio_data_in_0_1 = gpio_data_in[31:0];
   assign gpio_data_oe[31:0] = gpio_0_gpio_data_oe;
   assign gpio_data_out[31:0] = gpio_0_gpio_data_out;
@@ -466,10 +475,10 @@ module system
         .axi_arprot(ps7_0_axi_periph_M00_AXI_ARPROT),
         .axi_arready(ps7_0_axi_periph_M00_AXI_ARREADY),
         .axi_arvalid(ps7_0_axi_periph_M00_AXI_ARVALID),
-        .axi_awaddr(ps7_0_axi_periph_M00_AXI_AWADDR[4:0]),
+        .axi_awaddr(ps7_0_axi_periph_M00_AXI_awaddr[4:0]),
         .axi_awprot(ps7_0_axi_periph_M00_AXI_AWPROT),
-        .axi_awready(ps7_0_axi_periph_M00_AXI_AWREADY),
-        .axi_awvalid(ps7_0_axi_periph_M00_AXI_AWVALID),
+        .axi_awready(M00_AXI_awready_1),
+        .axi_awvalid(ps7_0_axi_periph_M00_AXI_awvalid),
         .axi_bready(ps7_0_axi_periph_M00_AXI_BREADY),
         .axi_bresp(ps7_0_axi_periph_M00_AXI_BRESP),
         .axi_bvalid(ps7_0_axi_periph_M00_AXI_BVALID),
@@ -488,10 +497,10 @@ module system
   system_ila_0_0 ila_0
        (.clk(processing_system7_0_FCLK_CLK0),
         .probe0(ps7_0_axi_periph_M00_AXI_WREADY),
-        .probe1(ps7_0_axi_periph_M00_AXI_AWADDR[4:0]),
+        .probe1({1'b0,1'b0,1'b0,1'b0,1'b0}),
         .probe10(ps7_0_axi_periph_M00_AXI_RDATA),
-        .probe11(ps7_0_axi_periph_M00_AXI_AWVALID),
-        .probe12(ps7_0_axi_periph_M00_AXI_AWREADY),
+        .probe11(1'b0),
+        .probe12(1'b0),
         .probe13(ps7_0_axi_periph_M00_AXI_RRESP),
         .probe14(ps7_0_axi_periph_M00_AXI_WDATA),
         .probe15(ps7_0_axi_periph_M00_AXI_WSTRB),
@@ -587,10 +596,10 @@ module system
         .M00_AXI_arprot(ps7_0_axi_periph_M00_AXI_ARPROT),
         .M00_AXI_arready(ps7_0_axi_periph_M00_AXI_ARREADY),
         .M00_AXI_arvalid(ps7_0_axi_periph_M00_AXI_ARVALID),
-        .M00_AXI_awaddr(ps7_0_axi_periph_M00_AXI_AWADDR),
+        .M00_AXI_awaddr(ps7_0_axi_periph_M00_AXI_awaddr),
         .M00_AXI_awprot(ps7_0_axi_periph_M00_AXI_AWPROT),
-        .M00_AXI_awready(ps7_0_axi_periph_M00_AXI_AWREADY),
-        .M00_AXI_awvalid(ps7_0_axi_periph_M00_AXI_AWVALID),
+        .M00_AXI_awready(M00_AXI_awready_1),
+        .M00_AXI_awvalid(ps7_0_axi_periph_M00_AXI_awvalid),
         .M00_AXI_bready(ps7_0_axi_periph_M00_AXI_BREADY),
         .M00_AXI_bresp(ps7_0_axi_periph_M00_AXI_BRESP),
         .M00_AXI_bvalid(ps7_0_axi_periph_M00_AXI_BVALID),
