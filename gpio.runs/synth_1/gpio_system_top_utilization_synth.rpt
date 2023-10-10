@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1.1 (lin64) Build 3900603 Fri Jun 16 19:30:25 MDT 2023
-| Date         : Wed Sep 27 19:38:47 2023
+| Date         : Sun Oct  8 19:30:41 2023
 | Host         : sadhanpawar-ThinkPad-E14-Gen-4 running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_utilization -file gpio_system_top_utilization_synth.rpt -pb gpio_system_top_utilization_synth.pb
 | Design       : gpio_system_top
@@ -163,6 +163,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-------------------------------+------+
 | system_processing_system7_0_0 |    1 |
 | system_proc_sys_reset_0_0     |    1 |
+| system_ila_0_0                |    1 |
 | system_gpio_0_0               |    1 |
 | system_auto_pc_0              |    1 |
 +-------------------------------+------+

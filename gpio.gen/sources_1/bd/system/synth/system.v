@@ -2,7 +2,7 @@
 //Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2023.1.1 (lin64) Build 3900603 Fri Jun 16 19:30:25 MDT 2023
-//Date        : Wed Sep 27 19:27:50 2023
+//Date        : Sun Oct  8 19:28:46 2023
 //Host        : sadhanpawar-ThinkPad-E14-Gen-4 running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target system.bd
 //Design      : system
@@ -315,7 +315,7 @@ module s00_couplers_imp_11SE3QO
         .s_axi_wvalid(s00_couplers_to_auto_pc_WVALID));
 endmodule
 
-(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=7,numReposBlks=5,numNonXlnxBlks=1,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_board_cnt=1,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "system.hwdef" *) 
+(* CORE_GENERATION_INFO = "system,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=system,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=8,numReposBlks=6,numNonXlnxBlks=1,numHierBlks=2,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_board_cnt=1,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "system.hwdef" *) 
 module system
    (DDR_addr,
     DDR_ba,
@@ -485,6 +485,27 @@ module system
         .gpio_data_oe(gpio_0_gpio_data_oe),
         .gpio_data_out(gpio_0_gpio_data_out),
         .intr(gpio_0_intr));
+  system_ila_0_0 ila_0
+       (.clk(processing_system7_0_FCLK_CLK0),
+        .probe0(ps7_0_axi_periph_M00_AXI_WREADY),
+        .probe1(ps7_0_axi_periph_M00_AXI_AWADDR[4:0]),
+        .probe10(ps7_0_axi_periph_M00_AXI_RDATA),
+        .probe11(ps7_0_axi_periph_M00_AXI_AWVALID),
+        .probe12(ps7_0_axi_periph_M00_AXI_AWREADY),
+        .probe13(ps7_0_axi_periph_M00_AXI_RRESP),
+        .probe14(ps7_0_axi_periph_M00_AXI_WDATA),
+        .probe15(ps7_0_axi_periph_M00_AXI_WSTRB),
+        .probe16(ps7_0_axi_periph_M00_AXI_RVALID),
+        .probe17(ps7_0_axi_periph_M00_AXI_ARPROT),
+        .probe18(ps7_0_axi_periph_M00_AXI_AWPROT),
+        .probe2(ps7_0_axi_periph_M00_AXI_BRESP),
+        .probe3(ps7_0_axi_periph_M00_AXI_BVALID),
+        .probe4(ps7_0_axi_periph_M00_AXI_BREADY),
+        .probe5(ps7_0_axi_periph_M00_AXI_ARADDR[4:0]),
+        .probe6(ps7_0_axi_periph_M00_AXI_RREADY),
+        .probe7(ps7_0_axi_periph_M00_AXI_WVALID),
+        .probe8(ps7_0_axi_periph_M00_AXI_ARVALID),
+        .probe9(ps7_0_axi_periph_M00_AXI_ARREADY));
   system_proc_sys_reset_0_0 proc_sys_reset_0
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),

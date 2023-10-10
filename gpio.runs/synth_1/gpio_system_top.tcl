@@ -96,6 +96,10 @@ set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_ila_0_0/system_ila_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/system_ooc.xdc]
 
 OPTRACE "Adding files" END { }

@@ -19,7 +19,8 @@
           "auto_pc": ""
         }
       },
-      "xlconcat_0": ""
+      "xlconcat_0": "",
+      "ila_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1421,6 +1422,12 @@
             "value": "3"
           }
         }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "system_ila_0_0",
+        "xci_path": "ip/system_ila_0_0/system_ila_0_0.xci",
+        "inst_hier_path": "ila_0"
       }
     },
     "interface_nets": {
@@ -1445,7 +1452,8 @@
       "ps7_0_axi_periph_M00_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M00_AXI",
-          "gpio_0/AXI"
+          "gpio_0/AXI",
+          "ila_0/SLOT_0_AXI"
         ]
       }
     },
@@ -1492,7 +1500,8 @@
           "ps7_0_axi_periph/S00_ACLK",
           "gpio_0/axi_aclk",
           "ps7_0_axi_periph/M00_ACLK",
-          "ps7_0_axi_periph/ACLK"
+          "ps7_0_axi_periph/ACLK",
+          "ila_0/clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
