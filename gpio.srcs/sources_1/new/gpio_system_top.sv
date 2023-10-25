@@ -53,10 +53,7 @@ module gpio_system_top (
     inout [53:0]FIXED_IO_mio,
     inout FIXED_IO_ps_clk,
     inout FIXED_IO_ps_porb,
-    inout FIXED_IO_ps_srstb,
-    inout [4:0]awaddr,
-    inout awvalid,
-    inout awready
+    inout FIXED_IO_ps_srstb
     );
      
     // Terminate all of the unused outputs or i/o's
@@ -77,8 +74,8 @@ module gpio_system_top (
     assign IMU_DEN_AG = 1'b0;
 
     // display g (gpio) on left seven segment display
-    assign SS_ANODE = 4'b0111;
-    assign SS_CATHODE = 8'b10010000;
+    //assign SS_ANODE = 4'b0111;
+    //assign SS_CATHODE = 8'b10010000;
 
     // Tie gpio to PMOD connectors
     wire [31:0] gpio_data_in;
@@ -87,14 +84,34 @@ module gpio_system_top (
 
     // pin control
     genvar j;
-    for (j = 0; j < 22; j = j + 1)
+    for (j = 0; j < 16; j = j + 1)
         assign GPIO[j] = gpio_data_oe[j] ? gpio_data_out[j] : 1'bz;
     assign gpio_data_in = {8'b0, GPIO[23:0]};
         
+    assign GPIO[16] = spiouts[0];
+    assign GPIO[17] = spiouts[1];
+    assign GPIO[18] = spiouts[2];
+    assign GPIO[19] = spiouts[3];
+
+    for (j = 20; j < 24; j = j + 1)
+        assign GPIO[j] = gpio_data_oe[j] ? gpio_data_out[j] : 1'bz;
+
     // Tie intr output to RGB0 green LED
     wire intr;
     assign RGB0 = {1'b0, intr, 1'b0};
+    
+    wire[3:0] spiouts;
 
+    //spi module
+    spi_engine(.SW(SW),
+                .PB(PB),
+                .clk(CLK100),
+                .GPIO(spiouts),
+                .LED(LED),
+                .SS_ANODE(SS_ANODE),   // Anodes 3..0 placed from left to right
+                .SS_CATHODE(SS_CATHODE) 
+                );
+    
     // Instantiate system wrapper
     system_wrapper system (
         .DDR_addr(DDR_addr),
@@ -121,10 +138,10 @@ module gpio_system_top (
         .gpio_data_in(gpio_data_in),
         .gpio_data_out(gpio_data_out),
         .gpio_data_oe(gpio_data_oe),
-        .intr(intr),
-        .awaddr(awaddr),
-        .awvalid(awvalid),
-        .awready(awready)
+        .intr(intr)
+        //.awaddr(awaddr),
+        //.awvalid(awvalid),
+        //.awready(awready)
         );
 
 endmodule

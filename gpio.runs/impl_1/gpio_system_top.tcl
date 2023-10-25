@@ -122,7 +122,9 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param tcl.collectionResultDisplayLimit 0
   set_param chipscope.maxJobs 4
+  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 16  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z007sclg400-1
@@ -143,6 +145,8 @@ OPTRACE "add files" START { }
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
   add_files /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/bd/system/system.bd
+  read_ip -quiet /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/ip/vio_0/vio_0.xci
+  read_ip -quiet /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/ip/vio_1/vio_1.xci
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
   read_xdc /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/constrs_1/new/blackboard.xdc

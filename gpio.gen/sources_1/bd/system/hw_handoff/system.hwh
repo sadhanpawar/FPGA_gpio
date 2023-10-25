@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Oct 10 14:57:25 2023" VIVADOVERSION="2023.1.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Oct 23 20:42:15 2023" VIVADOVERSION="2023.1.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z007s" NAME="system" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -129,21 +129,6 @@
         <CONNECTION INSTANCE="gpio_0" PORT="intr"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="4" NAME="awaddr" RIGHT="0" SIGIS="undef" SIGNAME="ps7_0_axi_periph_M00_AXI_awaddr">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_awaddr"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="awvalid" SIGIS="undef" SIGNAME="ps7_0_axi_periph_M00_AXI_awvalid">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_awvalid"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="awready" SIGIS="undef" SIGNAME="gpio_0_axi_awready">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="gpio_0" PORT="axi_awready"/>
-      </CONNECTIONS>
-    </PORT>
   </EXTERNALPORTS>
 
   <EXTERNALINTERFACES>
@@ -239,9 +224,8 @@
             <CONNECTION INSTANCE="proc_sys_reset_0" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="4" NAME="axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="ps7_0_axi_periph_M00_AXI_awaddr">
+        <PORT DIR="I" LEFT="4" NAME="axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="gpio_0_axi_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_awaddr"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_awaddr"/>
           </CONNECTIONS>
         </PORT>
@@ -250,17 +234,12 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_awprot"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="axi_awvalid" SIGIS="undef" SIGNAME="ps7_0_axi_periph_M00_AXI_awvalid">
+        <PORT DIR="I" NAME="axi_awvalid" SIGIS="undef" SIGNAME="gpio_0_axi_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_awvalid"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_awvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="axi_awready" SIGIS="undef" SIGNAME="gpio_0_axi_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_awready"/>
-            <CONNECTION INSTANCE="External_Ports" PORT="awready"/>
-          </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M00_AXI_awready"/>
           </CONNECTIONS>
@@ -5615,11 +5594,9 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_RREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="ps7_0_axi_periph_M00_AXI_awaddr">
+        <PORT DIR="O" LEFT="31" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="gpio_0_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="gpio_0" PORT="axi_awaddr"/>
-            <CONNECTION INSTANCE="gpio_0" PORT="axi_awaddr"/>
-            <CONNECTION INSTANCE="External_Ports" PORT="awaddr"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="2" NAME="M00_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="gpio_0_axi_awprot">
@@ -5627,17 +5604,12 @@
             <CONNECTION INSTANCE="gpio_0" PORT="axi_awprot"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M00_AXI_awvalid" SIGIS="undef" SIGNAME="ps7_0_axi_periph_M00_AXI_awvalid">
+        <PORT DIR="O" NAME="M00_AXI_awvalid" SIGIS="undef" SIGNAME="gpio_0_axi_awvalid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="gpio_0" PORT="axi_awvalid"/>
-            <CONNECTION INSTANCE="gpio_0" PORT="axi_awvalid"/>
-            <CONNECTION INSTANCE="External_Ports" PORT="awvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="M00_AXI_awready" SIGIS="undef" SIGNAME="gpio_0_axi_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="gpio_0" PORT="axi_awready"/>
-          </CONNECTIONS>
           <CONNECTIONS>
             <CONNECTION INSTANCE="gpio_0" PORT="axi_awready"/>
           </CONNECTIONS>

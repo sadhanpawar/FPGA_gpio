@@ -9,17 +9,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="482"></ZoomStartTime>
-      <ZoomEndTime time="593"></ZoomEndTime>
-      <Cursor1Time time="524"></Cursor1Time>
+      <ZoomStartTime time="0"></ZoomStartTime>
+      <ZoomEndTime time="9"></ZoomEndTime>
+      <Cursor1Time time="0"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="286"></NameColumnWidth>
+      <NameColumnWidth column_width="202"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="12" />
-   <wave_markers>
-   </wave_markers>
    <wvobject type="array" fp_name="system/system_i/ps7_0_axi_periph_M00_AXI_AWADDR">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">system/system_i/ps7_0_axi_periph_M00_AXI_AWADDR[4:0]</obj_property>

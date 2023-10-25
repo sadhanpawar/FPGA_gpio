@@ -26,37 +26,54 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 176786
+INFO: [Synth 8-7075] Helper process launched with PID 1319813
+WARNING: [Synth 8-6901] identifier 'spiouts' is used before its declaration [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/gpio_system_top.sv:91]
+WARNING: [Synth 8-6901] identifier 'spiouts' is used before its declaration [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/gpio_system_top.sv:92]
+WARNING: [Synth 8-6901] identifier 'spiouts' is used before its declaration [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/gpio_system_top.sv:93]
+WARNING: [Synth 8-6901] identifier 'spiouts' is used before its declaration [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/gpio_system_top.sv:94]
+WARNING: [Synth 8-11014] non-net output port 'anodes' cannot be initialized at declaration in SystemVerilog mode [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/seven_seg.sv:26]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2029.211 ; gain = 378.770 ; free physical = 26812 ; free virtual = 33307
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2036.148 ; gain = 379.738 ; free physical = 27444 ; free virtual = 34072
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'gpio_system_top' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/gpio_system_top.sv:10]
+INFO: [Synth 8-6157] synthesizing module 'spi_engine' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/spi_engine.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'vio_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-1319766-sadhanpawar-ThinkPad-E14-Gen-4/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vio_0' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-1319766-sadhanpawar-ThinkPad-E14-Gen-4/realtime/vio_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clock_div_2M' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/clock_div.sv:47]
+INFO: [Synth 8-6155] done synthesizing module 'clock_div_2M' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/clock_div.sv:47]
+INFO: [Synth 8-6157] synthesizing module 'hex_to_ss' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/hex_to_ss.sv:22]
+INFO: [Synth 8-6155] done synthesizing module 'hex_to_ss' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/hex_to_ss.sv:22]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/seven_seg.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'divide_by_5ms' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/clock_div.sv:71]
+INFO: [Synth 8-6155] done synthesizing module 'divide_by_5ms' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/clock_div.sv:71]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/seven_seg.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'spi_engine' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/spi_engine.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/hdl/system_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'system' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:318]
-INFO: [Synth 8-6157] synthesizing module 'system_gpio_0_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-176759-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_gpio_0_0' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-176759-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_gpio_0_0_stub.v:6]
-WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:497]
-INFO: [Synth 8-6157] synthesizing module 'system_ila_0_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-176759-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_ila_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_ila_0_0' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-176759-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_ila_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'system_proc_sys_reset_0_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-176759-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_proc_sys_reset_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_proc_sys_reset_0_0' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-176759-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_proc_sys_reset_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'mb_reset' of module 'system_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:518]
-WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:518]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:518]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'system_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:518]
-WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'system_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:518]
-INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-176759-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-176759-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:525]
-WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:525]
-WARNING: [Synth 8-7071] port 'FCLK_CLK1' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:525]
-WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'system_processing_system7_0_0' has 67 connections declared, but only 64 given [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:525]
-INFO: [Synth 8-6157] synthesizing module 'system_ps7_0_axi_periph_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:661]
+INFO: [Synth 8-6157] synthesizing module 'system_gpio_0_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-1319766-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_gpio_0_0' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-1319766-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_gpio_0_0_stub.v:6]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:488]
+INFO: [Synth 8-6157] synthesizing module 'system_ila_0_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-1319766-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_ila_0_0' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-1319766-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_ila_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_proc_sys_reset_0_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-1319766-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_proc_sys_reset_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_proc_sys_reset_0_0' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-1319766-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_proc_sys_reset_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'system_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:509]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:509]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:509]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'system_proc_sys_reset_0_0' is unconnected for instance 'proc_sys_reset_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:509]
+WARNING: [Synth 8-7023] instance 'proc_sys_reset_0' of module 'system_proc_sys_reset_0_0' has 10 connections declared, but only 6 given [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:509]
+INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-1319766-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-1319766-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:516]
+WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:516]
+WARNING: [Synth 8-7071] port 'FCLK_CLK1' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:516]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'system_processing_system7_0_0' has 67 connections declared, but only 64 given [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:516]
+INFO: [Synth 8-6157] synthesizing module 'system_ps7_0_axi_periph_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:652]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_11SE3QO' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:13]
-INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-176759-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_0' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-176759-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-1319766-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_0' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/.Xil/Vivado-1319766-sadhanpawar-ThinkPad-E14-Gen-4/realtime/system_auto_pc_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_11SE3QO' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'system_ps7_0_axi_periph_0' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:661]
+INFO: [Synth 8-6155] done synthesizing module 'system_ps7_0_axi_periph_0' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:652]
 INFO: [Synth 8-6157] synthesizing module 'system_xlconcat_0_0' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_xlconcat_0_0/synth/system_xlconcat_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
@@ -64,27 +81,15 @@ INFO: [Synth 8-6155] done synthesizing module 'system_xlconcat_0_0' (0#1) [/home
 INFO: [Synth 8-6155] done synthesizing module 'system' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:318]
 INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/hdl/system_wrapper.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'gpio_system_top' (0#1) [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/gpio_system_top.sv:10]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gpio_0'. This will prevent further optimization [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:471]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ps7_0_axi_periph'. This will prevent further optimization [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:590]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:497]
-WARNING: [Synth 8-3848] Net LED in module/entity gpio_system_top does not have driver. [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/gpio_system_top.sv:12]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'your_instance_name'. This will prevent further optimization [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/spi_engine.sv:81]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gpio_0'. This will prevent further optimization [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:462]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ps7_0_axi_periph'. This will prevent further optimization [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:581]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/synth/system.v:488]
 WARNING: [Synth 8-3917] design gpio_system_top has port RGB0[2] driven by constant 0
 WARNING: [Synth 8-3917] design gpio_system_top has port RGB0[0] driven by constant 0
 WARNING: [Synth 8-3917] design gpio_system_top has port RGB1[2] driven by constant 0
 WARNING: [Synth 8-3917] design gpio_system_top has port RGB1[1] driven by constant 0
 WARNING: [Synth 8-3917] design gpio_system_top has port RGB1[0] driven by constant 0
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_ANODE[3] driven by constant 0
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_ANODE[2] driven by constant 1
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_ANODE[1] driven by constant 1
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_ANODE[0] driven by constant 1
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_CATHODE[7] driven by constant 1
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_CATHODE[6] driven by constant 0
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_CATHODE[5] driven by constant 0
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_CATHODE[4] driven by constant 1
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_CATHODE[3] driven by constant 0
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_CATHODE[2] driven by constant 0
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_CATHODE[1] driven by constant 0
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_CATHODE[0] driven by constant 0
 WARNING: [Synth 8-3917] design gpio_system_top has port SERVO[3] driven by constant 0
 WARNING: [Synth 8-3917] design gpio_system_top has port SERVO[2] driven by constant 0
 WARNING: [Synth 8-3917] design gpio_system_top has port SERVO[1] driven by constant 0
@@ -199,18 +204,18 @@ WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_4_xlconcat is eith
 WARNING: [Synth 8-7129] Port In102[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2103.148 ; gain = 452.707 ; free physical = 26700 ; free virtual = 33195
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2111.086 ; gain = 454.676 ; free physical = 27348 ; free virtual = 33976
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2117.992 ; gain = 467.551 ; free physical = 26718 ; free virtual = 33213
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2122.961 ; gain = 466.551 ; free physical = 27346 ; free virtual = 33975
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2117.992 ; gain = 467.551 ; free physical = 26718 ; free virtual = 33213
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2122.961 ; gain = 466.551 ; free physical = 27346 ; free virtual = 33975
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2117.992 ; gain = 0.000 ; free physical = 26709 ; free virtual = 33205
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2122.961 ; gain = 0.000 ; free physical = 27348 ; free virtual = 33977
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -225,6 +230,8 @@ Parsing XDC File [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/syst
 Finished Parsing XDC File [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0/system_auto_pc_0_in_context.xdc] for cell 'system/system_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_ila_0_0/system_ila_0_0/system_ila_0_0_in_context.xdc] for cell 'system/system_i/ila_0'
 Finished Parsing XDC File [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_ila_0_0/system_ila_0_0/system_ila_0_0_in_context.xdc] for cell 'system/system_i/ila_0'
+Parsing XDC File [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/ip/vio_0/vio_0/vio_1_in_context.xdc] for cell 'nolabel_line106/your_instance_name'
+Finished Parsing XDC File [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/ip/vio_0/vio_0/vio_1_in_context.xdc] for cell 'nolabel_line106/your_instance_name'
 Parsing XDC File [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/constrs_1/new/blackboard.xdc]
 Finished Parsing XDC File [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/constrs_1/new/blackboard.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/constrs_1/new/blackboard.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/gpio_system_top_propImpl.xdc].
@@ -235,22 +242,22 @@ Parsing XDC File [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/dont_tou
 Finished Parsing XDC File [/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2233.742 ; gain = 0.000 ; free physical = 26715 ; free virtual = 33211
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2259.711 ; gain = 0.000 ; free physical = 27350 ; free virtual = 33979
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2233.742 ; gain = 0.000 ; free physical = 26715 ; free virtual = 33210
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2259.711 ; gain = 0.000 ; free physical = 27350 ; free virtual = 33978
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2233.742 ; gain = 583.301 ; free physical = 26694 ; free virtual = 33189
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2259.711 ; gain = 603.301 ; free physical = 27348 ; free virtual = 33977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2233.742 ; gain = 583.301 ; free physical = 26694 ; free virtual = 33189
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2259.711 ; gain = 603.301 ; free physical = 27348 ; free virtual = 33977
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -523,16 +530,76 @@ Applied set_property KEEP_HIERARCHY = SOFT for system/system_i/ps7_0_axi_periph/
 Applied set_property KEEP_HIERARCHY = SOFT for system/system_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for system/system_i/xlconcat_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for system/system_i/ila_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for nolabel_line106/your_instance_name. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2233.742 ; gain = 583.301 ; free physical = 26688 ; free virtual = 33183
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2259.711 ; gain = 603.301 ; free physical = 27348 ; free virtual = 33976
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'states_reg' in module 'spi_engine'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                iSTATE22 | 00000000000000000000000000000000000001 |                         00000000
+                iSTATE21 | 00000000000000000000000000000000000010 |                         00000001
+                iSTATE20 | 00000000000000000000000000000000000100 |                         00000010
+                iSTATE19 | 00000000000000000000000000000000001000 |                         00000011
+                iSTATE10 | 00000000000000000000000000000000010000 |                         00000100
+                 iSTATE8 | 00000000000000000000000000000000100000 |                         00000101
+                 iSTATE6 | 00000000000000000000000000000001000000 |                         00000110
+                 iSTATE3 | 00000000000000000000000000000010000000 |                         00000111
+                 iSTATE9 | 00000000000000000000000000000100000000 |                         00001000
+                 iSTATE7 | 00000000000000000000000000001000000000 |                         00001001
+                 iSTATE4 | 00000000000000000000000000010000000000 |                         00001010
+                 iSTATE1 | 00000000000000000000000000100000000000 |                         00001011
+                iSTATE38 | 00000000000000000000000001000000000000 |                         00001100
+                iSTATE37 | 00000000000000000000000010000000000000 |                         00001101
+                iSTATE34 | 00000000000000000000000100000000000000 |                         00001110
+                iSTATE30 | 00000000000000000000001000000000000000 |                         00001111
+                 iSTATE2 | 00000000000000000000010000000000000000 |                         00010001
+                 iSTATE0 | 00000000000000000000100000000000000000 |                         00010010
+                  iSTATE | 00000000000000000001000000000000000000 |                         00010011
+                iSTATE35 | 00000000000000000010000000000000000000 |                         00010100
+                iSTATE31 | 00000000000000000100000000000000000000 |                         00010101
+                iSTATE28 | 00000000000000001000000000000000000000 |                         00010110
+                iSTATE25 | 00000000000000010000000000000000000000 |                         00010111
+                iSTATE32 | 00000000000000100000000000000000000000 |                         00011000
+                iSTATE29 | 00000000000001000000000000000000000000 |                         00011001
+                iSTATE26 | 00000000000010000000000000000000000000 |                         00011010
+                iSTATE23 | 00000000000100000000000000000000000000 |                         00011011
+                iSTATE17 | 00000000001000000000000000000000000000 |                         00011100
+                iSTATE15 | 00000000010000000000000000000000000000 |                         00011101
+                iSTATE13 | 00000000100000000000000000000000000000 |                         00011110
+                iSTATE11 | 00000001000000000000000000000000000000 |                         00011111
+                iSTATE36 | 00000010000000000000000000000000000000 |                         00100000
+                iSTATE33 | 00000100000000000000000000000000000000 |                         00100001
+                iSTATE24 | 00001000000000000000000000000000000000 |                         00100011
+                iSTATE18 | 00010000000000000000000000000000000000 |                         00100100
+                iSTATE16 | 00100000000000000000000000000000000000 |                         00100101
+                iSTATE14 | 01000000000000000000000000000000000000 |                         00100110
+                iSTATE12 | 10000000000000000000000000000000000000 |                         00100111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'states_reg' using encoding 'one-hot' in module 'spi_engine'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2233.742 ; gain = 583.301 ; free physical = 26705 ; free virtual = 33202
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2259.711 ; gain = 603.301 ; free physical = 27343 ; free virtual = 33973
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'nolabel_line106/nibble2' (hex_to_ss) to 'nolabel_line106/nibble3'
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   4 Input    8 Bit        Muxes := 1     
+	  38 Input    8 Bit        Muxes := 1     
+	  38 Input    1 Bit        Muxes := 6     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -554,18 +621,6 @@ WARNING: [Synth 8-3917] design gpio_system_top has port RGB0[0] driven by consta
 WARNING: [Synth 8-3917] design gpio_system_top has port RGB1[2] driven by constant 0
 WARNING: [Synth 8-3917] design gpio_system_top has port RGB1[1] driven by constant 0
 WARNING: [Synth 8-3917] design gpio_system_top has port RGB1[0] driven by constant 0
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_ANODE[3] driven by constant 0
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_ANODE[2] driven by constant 1
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_ANODE[1] driven by constant 1
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_ANODE[0] driven by constant 1
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_CATHODE[7] driven by constant 1
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_CATHODE[6] driven by constant 0
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_CATHODE[5] driven by constant 0
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_CATHODE[4] driven by constant 1
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_CATHODE[3] driven by constant 0
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_CATHODE[2] driven by constant 0
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_CATHODE[1] driven by constant 0
-WARNING: [Synth 8-3917] design gpio_system_top has port SS_CATHODE[0] driven by constant 0
 WARNING: [Synth 8-3917] design gpio_system_top has port SERVO[3] driven by constant 0
 WARNING: [Synth 8-3917] design gpio_system_top has port SERVO[2] driven by constant 0
 WARNING: [Synth 8-3917] design gpio_system_top has port SERVO[1] driven by constant 0
@@ -579,25 +634,25 @@ WARNING: [Synth 8-3917] design gpio_system_top has port IMU_CS_AG driven by cons
 WARNING: [Synth 8-3917] design gpio_system_top has port IMU_CS_M driven by constant 1
 WARNING: [Synth 8-3917] design gpio_system_top has port IMU_DEN_AG driven by constant 0
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2233.742 ; gain = 583.301 ; free physical = 26670 ; free virtual = 33171
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2259.711 ; gain = 603.301 ; free physical = 27328 ; free virtual = 33962
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2233.742 ; gain = 583.301 ; free physical = 26743 ; free virtual = 33244
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2259.711 ; gain = 603.301 ; free physical = 27330 ; free virtual = 33964
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2233.742 ; gain = 583.301 ; free physical = 26741 ; free virtual = 33243
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2259.711 ; gain = 603.301 ; free physical = 27332 ; free virtual = 33965
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 2233.742 ; gain = 583.301 ; free physical = 26737 ; free virtual = 33238
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2259.711 ; gain = 603.301 ; free physical = 27330 ; free virtual = 33963
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -615,37 +670,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2233.742 ; gain = 583.301 ; free physical = 26734 ; free virtual = 33236
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2259.711 ; gain = 603.301 ; free physical = 27327 ; free virtual = 33960
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2233.742 ; gain = 583.301 ; free physical = 26739 ; free virtual = 33241
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2259.711 ; gain = 603.301 ; free physical = 27327 ; free virtual = 33960
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2233.742 ; gain = 583.301 ; free physical = 26751 ; free virtual = 33252
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2259.711 ; gain = 603.301 ; free physical = 27327 ; free virtual = 33960
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2233.742 ; gain = 583.301 ; free physical = 26751 ; free virtual = 33253
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2259.711 ; gain = 603.301 ; free physical = 27327 ; free virtual = 33960
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2233.742 ; gain = 583.301 ; free physical = 26750 ; free virtual = 33251
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2259.711 ; gain = 603.301 ; free physical = 27326 ; free virtual = 33960
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2233.742 ; gain = 583.301 ; free physical = 26750 ; free virtual = 33250
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2259.711 ; gain = 603.301 ; free physical = 27326 ; free virtual = 33960
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -655,11 +710,12 @@ Report BlackBoxes:
 +------+------------------------------+----------+
 |      |BlackBox name                 |Instances |
 +------+------------------------------+----------+
-|1     |system_auto_pc_0              |         1|
-|2     |system_gpio_0_0               |         1|
-|3     |system_ila_0_0                |         1|
-|4     |system_proc_sys_reset_0_0     |         1|
-|5     |system_processing_system7_0_0 |         1|
+|1     |vio_0                         |         1|
+|2     |system_auto_pc_0              |         1|
+|3     |system_gpio_0_0               |         1|
+|4     |system_ila_0_0                |         1|
+|5     |system_proc_sys_reset_0_0     |         1|
+|6     |system_processing_system7_0_0 |         1|
 +------+------------------------------+----------+
 
 Report Cell Usage: 
@@ -671,36 +727,47 @@ Report Cell Usage:
 |3     |system_ila_0                |     1|
 |4     |system_proc_sys_reset_0     |     1|
 |5     |system_processing_system7_0 |     1|
-|6     |LUT1                        |    22|
-|7     |IBUF                        |     2|
-|8     |IOBUF                       |    22|
-|9     |OBUF                        |    37|
-|10    |OBUFT                       |    10|
+|6     |vio                         |     1|
+|7     |BUFG                        |     2|
+|8     |CARRY4                      |     5|
+|9     |LUT1                        |    22|
+|10    |LUT2                        |    12|
+|11    |LUT3                        |     7|
+|12    |LUT4                        |    17|
+|13    |LUT5                        |    10|
+|14    |LUT6                        |    32|
+|15    |FDRE                        |   105|
+|16    |FDSE                        |     1|
+|17    |IBUF                        |    12|
+|18    |IOBUF                       |    20|
+|19    |OBUF                        |    44|
 +------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2233.742 ; gain = 583.301 ; free physical = 26750 ; free virtual = 33250
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2259.711 ; gain = 603.301 ; free physical = 27328 ; free virtual = 33962
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 68 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2233.742 ; gain = 467.551 ; free physical = 26728 ; free virtual = 33229
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2233.742 ; gain = 583.301 ; free physical = 26726 ; free virtual = 33229
+Synthesis finished with 0 errors, 0 critical warnings and 34 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 2259.711 ; gain = 466.551 ; free physical = 27326 ; free virtual = 33959
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2259.711 ; gain = 603.301 ; free physical = 27326 ; free virtual = 33959
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2233.742 ; gain = 0.000 ; free physical = 27022 ; free virtual = 33525
-INFO: [Netlist 29-17] Analyzing 22 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2259.711 ; gain = 0.000 ; free physical = 27606 ; free virtual = 34240
+INFO: [Netlist 29-17] Analyzing 25 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2233.742 ; gain = 0.000 ; free physical = 27004 ; free virtual = 33504
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2259.711 ; gain = 0.000 ; free physical = 27608 ; free virtual = 34241
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 22 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 22 instances
+  A total of 20 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 20 instances
 
-Synth Design complete | Checksum: 7b709e53
+Synth Design complete | Checksum: 292096fa
 INFO: [Common 17-83] Releasing license: Synthesis
-52 Infos, 170 Warnings, 0 Critical Warnings and 0 Errors encountered.
+68 Infos, 150 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:19 . Memory (MB): peak = 2233.742 ; gain = 895.668 ; free physical = 27015 ; free virtual = 33515
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1801.719; main = 1468.907; forked = 380.586
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3176.902; main = 2201.730; forked = 975.172
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 2259.711 ; gain = 920.637 ; free physical = 27608 ; free virtual = 34241
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1814.852; main = 1487.562; forked = 371.803
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3202.801; main = 2259.715; forked = 975.102
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint '/home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.runs/synth_1/gpio_system_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file gpio_system_top_utilization_synth.rpt -pb gpio_system_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Oct 10 15:26:30 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Oct 24 21:49:13 2023...

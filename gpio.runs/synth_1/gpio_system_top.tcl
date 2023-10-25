@@ -70,7 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z007sclg400-1
 
@@ -89,19 +91,33 @@ set_property ip_output_repo /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.cache/ip [c
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib -sv /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/gpio_system_top.sv
+read_verilog -library xil_defaultlib -sv {
+  /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/gpio_system_top.sv
+  /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/spi_engine.sv
+  /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/clock_div.sv
+  /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/hex_to_ss.sv
+  /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/new/seven_seg.sv
+}
 read_verilog -library xil_defaultlib /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/hdl/system_wrapper.v
 add_files /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/bd/system/system.bd
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_proc_sys_reset_0_0/system_proc_sys_reset_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_ila_0_0/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_ila_0_0/system_ila_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/bd/system/system_ooc.xdc]
+
+read_ip -quiet /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/ip/vio_0/vio_0.xci
+set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/ip/vio_0/vio_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/ip/vio_0/vio_0_ooc.xdc]
+
+read_ip -quiet /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.srcs/sources_1/ip/vio_1/vio_1.xci
+set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/ip/vio_1/vio_1.xdc]
+set_property used_in_implementation false [get_files -all /home/sadhanpawar/UTA/SOC/FPGA/gpio/gpio.gen/sources_1/ip/vio_1/vio_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
